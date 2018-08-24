@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<html>
 <html lang="fr" class="no-js">
 <head>
     <!-- Mobile Specific Meta -->
@@ -31,6 +31,8 @@
     <link rel="stylesheet" href="{{asset('css/main.css')}}">
 </head>
 <body>
+
+
 <header id="header" id="home">
     <div class="container main-menu">
         <div class="row align-items-center justify-content-between d-flex">
@@ -41,7 +43,7 @@
                 <ul class="nav-menu">
                     <li class="menu-active"><a href="{{ path('homepage')}}"> <h4>Accueil</h4></a></li>
                     <li><a href="about.html"><h4>Produits</h4></a></li>
-                    <li><a href="{{ path('contact')}}"><h4>Contact</h4></a></li>
+                    <li><a href="{{path('contact')}}"><h4>Contact</h4></a></li>
 
                 </ul>
             </nav><!-- #nav-menu-container -->
@@ -49,134 +51,68 @@
     </div>
 </header><!-- #header -->
 
-<!-- start banner Area -->
-<section class="banner-area relative" id="home">
-    <div class="overlay overlay-bg"></div>
+
+
+<!-- Start contact-page Area -->
+<section class="contact-page-area section-gap">
     <div class="container">
-        <div class="row fullscreen d-flex align-items-center justify-content-center">
-            <div class="banner-content col-lg-12 col-md-12">
-                <h6 class="text-uppercase"></h6>
-                <h1>
-                    ETS MEKAOUI
-                </h1>
-                <h2 style="color: white;">Machines et Equipements de conditionnement</h2>
-
-            </div>
-        </div>
-    </div>
-</section>
-<!-- End banner Area -->
-
-<!-- End Button -->
-<!-- Start Align Area -->
-    <section class="home-about-area section-gap" id="feature" style="margin-top: 80px">
-        <div class="container">
-            <h1 class="mb-10" align="center">A propos de nous</h1>
-            <div class="row" align="center">
-
-                <div >
-                    <h4>
-                        Crée en 1995, l'activité de l'établissement MEC était concentrée sur la fabrication de soudeuses
-                        pour la fermeture de sacs en plastique de toute nature.<bg/>
-                        Aujourd'hui cette gamme c'est enrichie par la fabrication de peseuses linéaires
-                            et de convoyeurs à bandes.
-                    </h4>
-                </div>
-            </div>
-        </div>
-        </div>
-
-    </div>
-
-</section>
-<!-- Start service Area -->
-<section class="service-area section-gap" id="service">
-    <div class="container">
-        <div class="row justify-content-center">
-            <div class="col-md-12 pb-30 header-text text-center">
-                <h1 class="mb-10">Nos produits</h1>
-
-            </div>
-        </div>
         <div class="row">
-            <div class="col-lg-4">
-                <div class="single-service">
-                    <div class="thumb">
-                        <img src="{{asset('img/scelleuse.jpg')}}" height="340px"  alt="">
-                    </div>
-                    <h4>Soudeuses et scelleuses</h4>
-                    <p>
-                        Nous proposons des soudeuses manuelles et semi-automatiques à fermetures magnétiques
-                        ou pneumatiques.<br>
-                        <a href="#">(voir plus)</a>
-                       </p>
-                </div>
-            </div>
-            <div class="col-lg-4">
-                <div class="single-service">
-                    <div class="thumb">
-                        <img src="{{asset('img/peseuse.jpg')}}" height="340px" alt="">
 
-                    </div>
-                    <h4>Peseuses</h4>
-                    <p>
-                        Des peseuses pondérales pour le remplissage de sacs de 100g à 5kg.
+            <div class="col-lg-4 d-flex flex-column address-wrap">
+                <div class="single-contact-address d-flex flex-row">
+                    <div class="icon">
                         <br>
-                        <a href="#">(voir plus)</a>
-                    </p>
+                        <span class="lnr lnr-home"></span>
+                    </div>
+                    <div class="contact-details">
+                        <br>
+                        <h5>Drâa El Mizan</h5>
+                        <p>Tizi-OUzou, Algérie </p>
+                    </div>
+                </div>
+                <div class="single-contact-address d-flex flex-row">
+                    <div class="icon">
+                        <span class="lnr lnr-phone-handset"></span>
+                    </div>
+                    <div class="contact-details">
+                        <h5>+213 770 92 67 89</h5>
+                    </div>
+                </div>
+                <div class="single-contact-address d-flex flex-row">
+                    <div class="icon">
+                        <span class="lnr lnr-envelope"></span>
+                    </div>
+                    <div class="contact-details">
+                        <h5>mekaouiabder@gmail.com</h5>
+                    </div>
                 </div>
             </div>
-            <div class="col-lg-4">
-                <div class="single-service">
-                    <div class="thumb">
-                        <img src="{{asset('img/tapis.jpg')}}" height="340px"  alt="">
+            <div class="col-lg-8">
+                <form class="form-area " id="myForm" action="mail.php" method="post" class="contact-form text-right">
+                    <div class="row">
+                        <div class="col-lg-6 form-group">
+                            <input name="name" placeholder="Nom" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Enter your name'" class="common-input mb-20 form-control" required="" type="text">
+
+                            <input name="email" placeholder="E-mail" pattern="[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{1,63}$" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Enter email address'" class="common-input mb-20 form-control" required="" type="email">
+
+                            <input name="subject" placeholder="N° de téléphone" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Enter your subject'" class="common-input mb-20 form-control" required="" type="text">
+                            <div class="mt-20 alert-msg" style="text-align: left;"></div>
+                        </div>
+                        <div class="col-lg-6 form-group">
+                            <textarea class="common-textarea form-control" name="message" placeholder="Messege" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Messege'" required=""></textarea>
+                            <button class="submit-btn primary circle mt-30" style="float: right;">Envoyer</button>
+                        </div>
                     </div>
-                    <h4>Tapis convoyeurs</h4>
-                    <p>
-                        Des convoyeurs à bandes droits ou inclinés sur commande.
-                        <br>
-                        <a href="#">(voir plus)</a>
-                    </p>
-                </div>
+                </form>
             </div>
         </div>
     </div>
 </section>
-
-<!-- Start cat Area -->
-<section class="home-about-area section-gap" id="feature">
-    <div class="container">
-        <h1 class="mb-10" align="center">Services</h1>
-        <div class="row">
-            <div class="col-lg-4">
-                <div class="single-cat d-flex flex-column">
-                    <a href="#" class="hb-sm-margin mx-auto d-block"><span class="hb hb-sm inv hb-facebook-inv"><span class="lnr lnr-magic-wand"></span></span></a>
-                    <h4 class="mb-20" style="margin-top: 23px;" align="center">Maintenance des équipements industriels</h4>
-
-                </div>
-            </div>
-            <div class="col-lg-4">
-                <div class="single-cat">
-                    <a href="#" class="hb-sm-margin mx-auto d-block"><span class="hb hb-sm inv hb-facebook-inv"><span class="lnr lnr-rocket"></span></span></a>
-                    <h4 class="mt-40 mb-20" align="center">Rénovation de machines</h4>
-
-                </div>
-            </div>
-            <div class="col-lg-4">
-                <div class="single-cat">
-                    <a href="#" class="hb-sm-margin mx-auto d-block"><span class="hb hb-sm inv hb-facebook-inv"><span class="lnr lnr-bug"></span></span></a>
-                    <h4 class="mt-40 mb-20"align="center">Etudes techniques</h4>
-
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-<!-- End cat Area -->
+<!-- End contact-page Area -->
 
 <!-- start footer Area -->
-<footer class="footer-area section-gap" style="height: 10px">
-    <div class="container" style="margin-top: -50px">
+<footer class="footer-area section-gap">
+    <div class="container">
         <div class="row">
             <div class="col-lg-4 col-md-6 col-sm-6">
                 <div class="single-footer-widget">
@@ -222,7 +158,6 @@
 <script src="{{asset('js/vendor/jquery-2.2.4.min.js')}}"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
 <script src="{{asset('js/vendor/bootstrap.min.js')}}"></script>
-<script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBhOdIF3Y9382fqJYt5I_sswSrEw5eihAA"></script>
 <script src="{{asset('js/easing.min.js')}}"></script>
 <script src="{{asset('js/hoverIntent.js')}}"></script>
 <script src="{{asset('js/superfish.min.js')}}"></script>
@@ -237,6 +172,3 @@
 <script src="{{asset('js/main.js')}}"></script>
 </body>
 </html>
-
-
-
